@@ -38,25 +38,30 @@
 
 ---
 
-# 1. Title
-
 ## **Healthcare Data and AI Portfolio**
-
+<div align="justify">
 This portfolio presents my work across population health analytics, clinical prediction, infectious disease modelling, survival analysis, causal inference, explainable artificial intelligence and Digital Twin simulation.
 
-My focus is not only on building accurate models. I design analytical workflows that are:
+<div align="justify">
 
-* reproducible and transparent  
-* statistically defensible  
-* interpretable for clinical and non-technical audiences  
-* aligned with real healthcare and public health decisions  
-* honest about uncertainty, bias and limitations  
+<p>
+My focus is not only on building accurate models. I design analytical workflows that are:
+</p>
+<ul>
+  <li>Reproducible and transparent</li>
+  <li>Statistically defensible</li>
+  <li>Interpretable for clinical and non-technical audiences</li>
+  <li>Aligned with real healthcare and public health decisions</li>
+  <li>Honest about uncertainty, bias and limitations</li>
+</ul>
+
+</div>
 
 > **Professional value proposition:** I transform complex health datasets into evidence that helps teams understand risk, prioritise interventions and make better decisions.
 
 ---
 
-# 2. Executive Summary
+# Executive Summary
 
 I am a PhD-trained healthcare data scientist with more than four years of experience working with large, longitudinal and multidisciplinary datasets. My research has used UK Biobank data, clinical and epidemiological records, environmental data, medical imaging and behavioural variables.
 
@@ -377,6 +382,7 @@ Email: [mehreen.kiran89@gmail.com](mailto:mehreen.kiran89@gmail.com)
 LinkedIn: [linkedin.com/in/mahreen-kiran](https://linkedin.com/in/mahreen-kiran)
 
 ---
+
 
 <div align="center">
 
