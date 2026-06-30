@@ -1,21 +1,21 @@
+<img src="assets/profile.jpeg"
+     alt="Dr Mahreen Kiran"
+     width="180"
+     align="left">
+
 <div align="center">
 
-<h1>
-  <img src="assets/profile.jpeg"
-       alt="Dr Mahreen Kiran"
-       width="180"
-       align="left">
-  &nbsp;&nbsp;&nbsp;
-  Dr Mahreen Kiran
-</h1>
+<h1>Dr Mahreen Kiran</h1>
 
-<h2>Healthcare Data Scientist and Analyst</h2>
+<h3>Healthcare Data Scientist and Analyst</h3>
 
-<h3>
-  Turning complex health data into clear, reproducible and clinically meaningful evidence
-</h3>
+<p>
+  <strong>
+    Turning complex health data into clear, reproducible and clinically meaningful evidence
+  </strong>
+</p>
 
-</div>
+<br>
 
 [![Python](https://img.shields.io/badge/Python-Data%20Science-0B6B6B?style=for-the-badge&logo=python&logoColor=white)](#4-methodology)
 [![Healthcare Analytics](https://img.shields.io/badge/Healthcare-Analytics-16858A?style=for-the-badge)](#featured-project-results)
