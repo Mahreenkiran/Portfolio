@@ -62,7 +62,7 @@ My focus is not only on building accurate models. I design analytical workflows 
 
 # Executive Summary
 <div align="justify">
-I am a PhD-trained healthcare data scientist with more than four years of experience working with large, longitudinal and multidisciplinary datasets. My research has used UK Biobank data, clinical and epidemiological records, environmental data, medical imaging and behavioural variables.
+I am a <b> PhD-trained healthcare data scientist</b> with more than four years of experience working with large, longitudinal and multidisciplinary datasets. My research has used UK Biobank data, clinical and epidemiological records, environmental data, medical imaging and behavioural variables.
 
 I work across the complete analytical lifecycle, from cohort definition and data quality assessment to modelling, validation, explainability and communication. My strongest areas include survival analysis, machine learning, causal inference, neural networks, SHAP explainability and healthcare-focused data storytelling.
 
