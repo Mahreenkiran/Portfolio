@@ -1,68 +1,1288 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dr Mahreen Kiran | Healthcare Data & AI Portfolio</title>
-<style>
-:root{--ink:#16343b;--teal:#0b6b6b;--teal2:#16858a;--mint:#e9f6f4;--sky:#eaf2f8;--gold:#f0b64d;--paper:#fff;--muted:#60747a;--line:#d9e7e8}
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#f4f8f8;line-height:1.55}
-a{color:var(--teal);text-decoration:none} a:hover{text-decoration:underline}
-nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{max-width:1160px;margin:auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:.2px}.navlinks{display:flex;gap:18px;font-size:14px}
-.hero{background:linear-gradient(125deg,#0d3d46 0%,#0b6b6b 56%,#1aa1a0 100%);color:white;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(255,255,255,.07);right:-120px;top:-190px}.hero .wrap{max-width:1160px;margin:auto;padding:82px 24px 72px;display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center;position:relative;z-index:1}.eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:13px;font-weight:700;color:#bfe9e5}.hero h1{font-size:54px;line-height:1.04;margin:12px 0}.hero h2{font-size:23px;font-weight:500;margin:0 0 20px;color:#daf5f2}.hero p{font-size:18px;max-width:740px;color:#edfafa}.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-block;padding:12px 18px;border-radius:9px;font-weight:700;background:white;color:var(--teal)}.btn.alt{background:transparent;border:1px solid rgba(255,255,255,.6);color:white}.hero-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.18)}.hero-card .metric{display:grid;grid-template-columns:82px 1fr;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.17)}.hero-card .metric:last-child{border:0}.hero-card b{font-size:31px}.hero-card span{color:#e6f8f6}
-section{max-width:1160px;margin:auto;padding:70px 24px}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}.kicker{color:var(--teal);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800}.section-head h2{font-size:36px;margin:6px 0 0;line-height:1.15}.section-head p{max-width:550px;color:var(--muted);margin:0}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-34px;position:relative;z-index:2}.stat{background:white;border-radius:14px;padding:24px;box-shadow:0 10px 30px rgba(24,73,78,.10);border:1px solid var(--line)}.stat b{font-size:32px;color:var(--teal);display:block}.stat span{color:var(--muted);font-size:14px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 25px rgba(24,73,78,.06)}.card h3{margin:8px 0;font-size:21px}.icon{width:46px;height:46px;border-radius:12px;background:var(--mint);display:grid;place-items:center;color:var(--teal);font-weight:900;font-size:20px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.tag{font-size:12px;padding:6px 9px;background:var(--mint);border-radius:999px;color:#24595d;font-weight:700}
-.project{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;margin:25px 0 34px;box-shadow:0 14px 36px rgba(24,73,78,.08)}.project .top{display:grid;grid-template-columns:1.04fr .96fr}.project .copy{padding:35px}.project .visual{background:#eef7f7;min-height:360px;display:flex;align-items:center;justify-content:center;padding:20px}.project .visual img{width:100%;max-height:410px;object-fit:contain;border-radius:10px}.project h3{font-size:28px;line-height:1.2;margin:8px 0 12px}.role{font-size:13px;text-transform:uppercase;letter-spacing:1.4px;color:var(--teal);font-weight:800}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0}.result{background:#f5faf9;border-left:4px solid var(--teal);padding:12px;border-radius:8px}.result b{display:block;font-size:20px;color:var(--teal)}.result span{font-size:12px;color:var(--muted)}.project .bottom{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:25px 35px 32px;border-top:1px solid var(--line)}.project ul{margin:8px 0 0;padding-left:19px}.project li{margin:7px 0}.note{background:#fff7e7;border-left:4px solid var(--gold);padding:14px 16px;border-radius:8px;color:#5d4a24;font-size:14px}
-.image-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}.image-pair img{width:100%;height:250px;object-fit:contain;background:#f2f7f7;border-radius:12px;border:1px solid var(--line)}
-.timeline{display:grid;grid-template-columns:180px 1fr;gap:22px;margin:18px 0;padding:20px 0;border-bottom:1px solid var(--line)}.timeline .when{font-weight:800;color:var(--teal)}.timeline h3{margin:0 0 5px}.timeline p{margin:0;color:var(--muted)}
-.publications{display:grid;grid-template-columns:1fr 1fr;gap:16px}.pub{background:white;border:1px solid var(--line);border-radius:12px;padding:18px}.pub b{display:block;margin-bottom:6px}.pub span{color:var(--muted);font-size:14px}
-.contact{background:linear-gradient(125deg,#103f48,#0b6b6b);max-width:none;color:white}.contact .inner{max-width:1160px;margin:auto;padding:68px 24px;display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center}.contact h2{font-size:38px;margin:0 0 10px}.contact p{color:#d9f3f0;margin:0}.contact .links{display:flex;flex-direction:column;gap:9px;text-align:right}.contact a{color:white;font-weight:700}
-footer{padding:25px;text-align:center;color:var(--muted);font-size:13px;background:white}
-@media(max-width:850px){.hero .wrap,.project .top,.project .bottom,.contact .inner{grid-template-columns:1fr}.stats,.grid3{grid-template-columns:1fr 1fr}.publications{grid-template-columns:1fr}.hero h1{font-size:42px}.navlinks{display:none}.contact .links{text-align:left}.timeline{grid-template-columns:1fr}.image-pair{grid-template-columns:1fr}}
-@media(max-width:520px){.stats,.grid3,.result-grid{grid-template-columns:1fr}.hero .wrap{padding-top:55px}.hero h1{font-size:36px}.section-head{display:block}.section-head h2{font-size:30px}}
-@media print{body{background:white;font-size:10.5pt}nav{display:none}.hero .wrap{padding:45px 34px}.hero h1{font-size:36pt}.hero h2{font-size:16pt}section{padding:34px 28px;max-width:none}.stats{margin-top:-20px;padding:0 28px}.project{break-inside:avoid;box-shadow:none}.project .top{grid-template-columns:1.05fr .95fr}.project .visual{min-height:270px}.project .visual img{max-height:300px}.section-head h2{font-size:25pt}.contact .inner{padding:40px 28px}.btn{border:1px solid #d3e0e1}.card,.stat{box-shadow:none}.pagebreak{break-before:page}}
-</style>
-  
-</head>
-<body>
-<nav><div class="wrap"><div class="brand">Dr Mahreen Kiran</div><div class="navlinks"><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#contact">Contact</a></div></div></nav>
-<header class="hero"><div class="wrap"><div><div class="eyebrow">Healthcare data scientist and analyst portfolio</div><h1>Dr Mahreen Kiran</h1><h2>Turning complex health data into clear, clinically meaningful evidence</h2><p>PhD-trained data scientist with more than four years of experience across population health, clinical prediction, infectious disease analytics and explainable AI. I build reproducible analytical workflows, communicate uncertainty clearly and translate model outputs into decisions that healthcare and public health teams can use.</p><div class="cta"><a class="btn" href="mailto:mehreen.kiran89@gmail.com">Contact me</a><a class="btn alt" href="https://linkedin.com/in/mahreen-kiran">LinkedIn</a></div></div><aside class="hero-card"><div class="metric"><b>500k+</b><span>UK Biobank participants represented in population-scale research</span></div><div class="metric"><b>0.90</b><span>C-index achieved in time-to-event diabetes prediction</span></div><div class="metric"><b>3,000</b><span>Patient records analysed in a six-year dengue study</span></div><div class="metric"><b>5+</b><span>Peer-reviewed papers plus a book chapter</span></div></aside></div></header>
-<div class="stats"><div class="stat"><b>PhD</b><span>Computer Science, healthcare-focused predictive analytics</span></div><div class="stat"><b>33 years</b><span>AI and diabetes literature mapped through bibliometric analysis</span></div><div class="stat"><b>1,000</b><span>Monte Carlo simulations in an explainable AI study</span></div><div class="stat"><b>No sponsorship</b><span>Global Talent Visa, available for UK roles</span></div></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dr Mahreen Kiran | Healthcare Data & AI Portfolio</title>
+    <style>
+      /* 1. THEME COLOURS AND MAIN FONT */
+      :root {
+        --ink: #16343b;
+        --teal: #0b6b6b;
+        --teal2: #16858a;
+        --mint: #e9f6f4;
+        --sky: #eaf2f8;
+        --gold: #f0b64d;
+        --paper: #fff;
+        --muted: #60747a;
+        --line: #d9e7e8;
+        --font-main: Inter, "Segoe UI", Arial, sans-serif;
+      }
 
-<section id="expertise"><div class="section-head"><div><div class="kicker">What I bring</div><h2>Healthcare analytics from data preparation to decision-ready insight</h2></div><p>My work combines rigorous statistics, machine learning and clear visual communication. I am particularly strong in longitudinal data, time-to-event analysis, model interpretation and multidisciplinary collaboration.</p></div><div class="grid3">
-<div class="card"><div class="icon">01</div><h3>Health data preparation</h3><p>Cohort definition, inclusion and exclusion criteria, missing-data assessment, recoding, outlier checks, feature engineering and traceable analytical datasets.</p><div class="tags"><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">SQL</span><span class="tag">Excel</span></div></div>
-<div class="card"><div class="icon">02</div><h3>Statistical and predictive modelling</h3><p>Regression, classification, survival analysis, neural networks, ensemble models, causal inference, validation, calibration and robustness testing.</p><div class="tags"><span class="tag">scikit-learn</span><span class="tag">lifelines</span><span class="tag">PyTorch</span><span class="tag">TensorFlow</span></div></div>
-<div class="card"><div class="icon">03</div><h3>Insight communication</h3><p>Clear reports, publication-ready visualisations, dashboards and explanations designed for clinicians, researchers, operational teams and senior stakeholders.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">Matplotlib</span><span class="tag">SHAP</span><span class="tag">VOSviewer</span></div></div>
-</div><div class="card" style="margin-top:20px"><img src="assets/capabilities.png" alt="Demonstrated analytical capability chart" style="width:100%;max-height:330px;object-fit:contain"></div></section>
+      /* 2. GLOBAL PAGE STYLES */
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: var(--font-main);
+        color: var(--ink);
+        background: #f4f8f8;
+        line-height: 1.55;
+      }
+      a {
+        color: var(--teal);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
 
-<section id="projects" class="pagebreak"><div class="section-head"><div><div class="kicker">Selected work</div><h2>Projects that demonstrate healthcare impact</h2></div><p>Each project below is presented as an employer-facing case study: the question, analytical approach, key result, practical relevance and tools used.</p></div>
-<article class="project"><div class="top"><div class="copy"><div class="role">PhD flagship project | Population health and prevention</div><h3>Behaviour-aware Digital Twin for Type 2 Diabetes prediction and prevention</h3><p><b>Challenge:</b> Conventional diabetes prediction often focuses heavily on biomarkers and underrepresents behavioural, psychosocial and lifestyle determinants. The goal was to build an interpretable framework that could estimate time to diabetes onset and support preventive what-if scenarios.</p><div class="result-grid"><div class="result"><b>0.90</b><span>Concordance index</span></div><div class="result"><b>500k+</b><span>UK Biobank cohort scale</span></div><div class="result"><b>18</b><span>Predictors in the final survival model</span></div></div><p class="note"><b>Employer value:</b> Demonstrates experience with longitudinal health data, clinical risk stratification, model validation, interpretable outputs and responsible communication of modifiable risk factors.</p></div><div class="visual"><img src="assets/diabetes_survival.png" alt="Kaplan-Meier survival trajectories across diabetes risk groups"></div></div><div class="bottom"><div><h4>What I did</h4><ul><li>Defined analytic cohorts and prepared behavioural, lifestyle, psychosocial and health variables.</li><li>Built penalised Cox models and neural approaches for time-to-event risk estimation.</li><li>Used causal reasoning and intervention simulation to examine potential changes in sleep, diet and mental health.</li><li>Created risk groups and survival trajectories to make model results easier to interpret.</li></ul></div><div><h4>Key findings and tools</h4><ul><li>Loneliness, insomnia, mental health history, smoking and dietary behaviours contributed meaningful risk information.</li><li>Healthy sleep duration showed a protective association, while several psychosocial stressors increased estimated hazard.</li><li><b>Tools:</b> Python, pandas, NumPy, lifelines, scikit-learn, neural networks, SHAP, causal inference, Matplotlib.</li></ul></div></div></article>
-<div class="image-pair"><img src="assets/diabetes_clustering.png" alt="Clustering and t-SNE analysis from diabetes research"><img src="assets/behaviour_networks.png" alt="Behavioural network reorganisation analysis"></div>
+      /* 3. TOP NAVIGATION */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      nav .wrap {
+        max-width: 1160px;
+        margin: auto;
+        padding: 13px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .brand {
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+      .navlinks {
+        display: flex;
+        gap: 18px;
+        font-size: 14px;
+      }
 
-<article class="project pagebreak"><div class="top"><div class="copy"><div class="role">Research collaboration | Infectious disease analytics</div><h3>Machine learning prediction of dengue infection across five districts</h3><p><b>Challenge:</b> Analyse a complex, imbalanced, multi-year patient dataset that combined clinical, laboratory, serological, behavioural, epidemiological and environmental information, then determine what genuinely contributed to case classification.</p><div class="result-grid"><div class="result"><b>3,000</b><span>Patient records</span></div><div class="result"><b>2019–24</b><span>Six-year study period</span></div><div class="result"><b>5</b><span>Endemic districts</span></div></div><p class="note"><b>Strong analytical judgement:</b> The analysis did not simply celebrate a high score. It identified that serological variables drove much of the full-model performance and showed that environmental variables alone were near chance for individual-level confirmation. This distinction protects against misleading claims.</p></div><div class="visual"><img src="assets/dengue_auc.png" alt="Dengue model AUC comparison"></div></div><div class="bottom"><div><h4>Analytical approach</h4><ul><li>Data-quality checks and preprocessing across more than 50 variables.</li><li>Class imbalance handled within training folds using SMOTE and class-weighted learning.</li><li>Compared Logistic Regression, Random Forest, Gradient Boosting and Decision Tree models.</li><li>Used stratified cross-validation, temporal and geographic validation, feature importance and ablation analysis.</li></ul></div><div><h4>Outcome and relevance</h4><ul><li>Initial model comparisons produced AUC-ROC values around 0.90 to 0.94.</li><li>A later full-feature model reached 0.995 AUC, but sensitivity analysis showed this was substantially driven by diagnostic serology.</li><li>Environmental-only AUC remained approximately 0.49 to 0.52, supporting their use at population or temporal surveillance level rather than individual diagnosis.</li><li><b>Tools:</b> Python, scikit-learn, pandas, cross-validation, SMOTE, feature importance, ablation analysis.</li></ul></div></div></article>
+      /* 4. HERO SECTION */
+      .hero {
+        background: linear-gradient(
+          125deg,
+          #0d3d46 0%,
+          #0b6b6b 56%,
+          #1aa1a0 100%
+        );
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero:after {
+        content: "";
+        position: absolute;
+        width: 520px;
+        height: 520px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.07);
+        right: -120px;
+        top: -190px;
+      }
+      .hero .wrap {
+        max-width: 1160px;
+        margin: auto;
+        padding: 82px 24px 72px;
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 50px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #bfe9e5;
+      }
+      .hero h1 {
+        font-size: 54px;
+        line-height: 1.04;
+        margin: 12px 0;
+      }
+      .hero h2 {
+        font-size: 23px;
+        font-weight: 500;
+        margin: 0 0 20px;
+        color: #daf5f2;
+      }
+      .hero p {
+        font-size: 18px;
+        max-width: 740px;
+        color: #edfafa;
+      }
+      .cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 18px;
+        border-radius: 9px;
+        font-weight: 700;
+        background: white;
+        color: var(--teal);
+      }
+      .btn.alt {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        color: white;
+      }
+      .hero-card {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 20px;
+        padding: 26px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+      }
+      .hero-card .metric {
+        display: grid;
+        grid-template-columns: 82px 1fr;
+        gap: 14px;
+        align-items: center;
+        padding: 13px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+      }
+      .hero-card .metric:last-child {
+        border: 0;
+      }
+      .hero-card b {
+        font-size: 31px;
+      }
+      .hero-card span {
+        color: #e6f8f6;
+      }
 
-<article class="project"><div class="top"><div class="copy"><div class="role">Explainable AI | Multidisciplinary research</div><h3>Climate-aware prediction of fungicide effectiveness using XGBoost and SHAP</h3><p><b>Challenge:</b> Integrate field trials, laboratory results, climate variables and molecular modelling to understand how temperature, humidity and precipitation altered pesticide effectiveness.</p><div class="result-grid"><div class="result"><b>1,000</b><span>Monte Carlo simulations</span></div><div class="result"><b>3</b><span>Key esterase proteins identified</span></div><div class="result"><b>-5.1</b><span>Best reported docking score</span></div></div><p class="note"><b>Transferable value:</b> Although this project is agricultural, it directly demonstrates skills relevant to healthcare analytics: multimodal data integration, interaction effects, explainability, simulation, uncertainty and translation of technical outputs into practical recommendations.</p></div><div class="visual"><img src="assets/xai_workflow.png" alt="Multidisciplinary workflow combining field, laboratory, computational and machine learning analysis"></div></div><div class="bottom"><div><h4>What I contributed</h4><ul><li>Prepared climate and pesticide variables, including imputation, scaling, categorical encoding and outlier checks.</li><li>Applied XGBoost and SHAP interaction analysis to quantify climate-dependent pesticide behaviour.</li><li>Used simulation to test combined environmental conditions and improve interpretability.</li></ul></div><div><h4>Key result</h4><ul><li>Propiconazole performed strongly, with Dose 4 producing the best disease suppression and yield improvement.</li><li>SHAP results separated moisture-dependent, region-specific and climate-adaptable pesticides.</li><li><b>Tools:</b> XGBoost, SHAP, Monte Carlo simulation, AlphaFold 2, molecular docking, Python.</li></ul></div></div></article>
-<div class="image-pair"><img src="assets/molecular_docking.png" alt="Molecular docking outputs"><img src="assets/shap_interactions.png" alt="SHAP interaction results"></div>
+      /* 5. GENERAL SECTION LAYOUT */
+      section {
+        max-width: 1160px;
+        margin: auto;
+        padding: 70px 24px;
+      }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: end;
+        margin-bottom: 28px;
+      }
+      .kicker {
+        color: var(--teal);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .section-head h2 {
+        font-size: 36px;
+        margin: 6px 0 0;
+        line-height: 1.15;
+      }
+      .section-head p {
+        max-width: 550px;
+        color: var(--muted);
+        margin: 0;
+      }
 
-<article class="project pagebreak"><div class="top"><div class="copy"><div class="role">MSc research | Medical image analysis</div><h3>Automated tuberculosis detection from chest radiographs</h3><p><b>Challenge:</b> Work with heterogeneous chest X-ray data collected from multiple hospitals and design a reproducible image-processing pipeline capable of highlighting pathological regions associated with tuberculosis.</p><div class="result-grid"><div class="result"><b>Multi-site</b><span>Hospital imaging sources</span></div><div class="result"><b>End-to-end</b><span>Preprocessing to classification</span></div><div class="result"><b>Clinical AI</b><span>Diagnostic support context</span></div></div></div><div class="visual" style="background:linear-gradient(135deg,#eaf5f4,#d9e9ef)"><div style="text-align:center;padding:30px"><div style="font-size:72px">🩻</div><h3 style="margin:10px 0">Chest X-ray analytics</h3><p style="color:#60747a">Image curation, preprocessing, segmentation and classical machine learning</p></div></div></div><div class="bottom"><div><h4>Work completed</h4><ul><li>Collected and curated X-ray datasets with variable formats and quality.</li><li>Designed preprocessing and segmentation workflows to isolate clinically relevant regions.</li><li>Applied computer vision and machine learning methods to support automated diagnostic analysis.</li></ul></div><div><h4>Transferable strengths</h4><ul><li>Clinical imaging data quality and standardisation.</li><li>Feature extraction and segmentation.</li><li>Understanding of diagnostic support rather than autonomous decision-making.</li></ul></div></div></article>
-</section>
+      /* 6. SUMMARY STATISTICS */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: -34px;
+        position: relative;
+        z-index: 2;
+      }
+      .stat {
+        background: white;
+        border-radius: 14px;
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(24, 73, 78, 0.1);
+        border: 1px solid var(--line);
+      }
+      .stat b {
+        font-size: 32px;
+        color: var(--teal);
+        display: block;
+      }
+      .stat span {
+        color: var(--muted);
+        font-size: 14px;
+      }
 
-<section id="experience"><div class="section-head"><div><div class="kicker">Professional background</div><h2>Research, teaching and multidisciplinary collaboration</h2></div><p>I combine technical depth with the ability to explain analytical choices to people from clinical, scientific, operational and academic backgrounds.</p></div>
-<div class="timeline"><div class="when">2022–2026</div><div><h3>Data Scientist, PhD Research | Anglia Ruskin University</h3><p>Population-scale diabetes prediction, survival analysis, Digital Twin simulation, behavioural network analysis, explainability, causal inference and publication.</p></div></div>
-<div class="timeline"><div class="when">2025–2026</div><div><h3>Research Associate | Cranfield University</h3><p>Analysed real-world maritime energy data and translated operational findings into recommendations for engineering and sustainability stakeholders.</p></div></div>
-<div class="timeline"><div class="when">Sep 2024</div><div><h3>Data Study Group Participant | Alan Turing Institute and UCL Hospital</h3><p>Worked in a multidisciplinary team on a clinical prediction challenge covering preprocessing, statistical analysis, model development and reporting.</p></div></div>
-<div class="timeline"><div class="when">2013–2022</div><div><h3>Lecturer in Computer Science</h3><p>Taught databases, image processing, programming and data structures, supervised research projects and communicated complex methods to mixed-ability audiences.</p></div></div>
-</section>
+      /* 7. EXPERTISE CARDS */
+      .grid3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .card {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 8px 25px rgba(24, 73, 78, 0.06);
+      }
+      .card h3 {
+        margin: 8px 0;
+        font-size: 21px;
+      }
+      .icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        background: var(--mint);
+        display: grid;
+        place-items: center;
+        color: var(--teal);
+        font-weight: 900;
+        font-size: 20px;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 15px;
+      }
+      .tag {
+        font-size: 12px;
+        padding: 6px 9px;
+        background: var(--mint);
+        border-radius: 999px;
+        color: #24595d;
+        font-weight: 700;
+      }
 
-<section id="publications"><div class="section-head"><div><div class="kicker">Research communication</div><h2>Selected publications and evidence outputs</h2></div><p>Peer-reviewed work demonstrates the ability to document methods, defend analytical decisions and communicate findings clearly.</p></div><div class="publications">
-<div class="pub"><b>A Digital Twin Framework for Predicting and Simulating Type 2 Diabetes Onset</b><span>Frontiers in Digital Health, 2026</span></div>
-<div class="pub"><b>Type 2 Diabetes Prediction Without Labs: A Systems-Level Neural Framework</b><span>Frontiers in Digital Health, 2026</span></div>
-<div class="pub"><b>Machine Learning and Artificial Intelligence in Type 2 Diabetes Prediction</b><span>33-year bibliometric and literature analysis, 2025</span></div>
-<div class="pub"><b>Explainable AI and Machine Learning for Wheat Black Point Disease</b><span>Multidisciplinary preprint, 2025</span></div>
-</div><div class="card" style="margin-top:18px"><img src="assets/bibliometric_trends.png" alt="Bibliometric citation and collaboration analysis" style="width:100%;max-height:380px;object-fit:contain"></div></section>
+      /* 8. PROJECT CASE STUDIES */
+      .project {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 25px 0 34px;
+        box-shadow: 0 14px 36px rgba(24, 73, 78, 0.08);
+      }
+      .project .top {
+        display: grid;
+        grid-template-columns: 1.04fr 0.96fr;
+      }
+      .project .copy {
+        padding: 35px;
+      }
+      .project .visual {
+        background: #eef7f7;
+        min-height: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .project .visual img {
+        width: 100%;
+        max-height: 410px;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      .project h3 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin: 8px 0 12px;
+      }
+      .role {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        color: var(--teal);
+        font-weight: 800;
+      }
+      .result-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 22px 0;
+      }
+      .result {
+        background: #f5faf9;
+        border-left: 4px solid var(--teal);
+        padding: 12px;
+        border-radius: 8px;
+      }
+      .result b {
+        display: block;
+        font-size: 20px;
+        color: var(--teal);
+      }
+      .result span {
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .project .bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 25px 35px 32px;
+        border-top: 1px solid var(--line);
+      }
+      .project ul {
+        margin: 8px 0 0;
+        padding-left: 19px;
+      }
+      .project li {
+        margin: 7px 0;
+      }
+      .note {
+        background: #fff7e7;
+        border-left: 4px solid var(--gold);
+        padding: 14px 16px;
+        border-radius: 8px;
+        color: #5d4a24;
+        font-size: 14px;
+      }
+      .image-pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .image-pair img {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+        background: #f2f7f7;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+      }
 
-<section id="contact" class="contact"><div class="inner"><div><div class="kicker" style="color:#bfe9e5">Open to healthcare analytics opportunities</div><h2>Let’s turn health data into evidence that improves decisions.</h2><p>Target roles: Healthcare Data Analyst, Senior Data Analyst, Clinical Data Analyst, Population Health Analyst and Health Data Scientist.</p></div><div class="links"><a href="mailto:mehreen.kiran89@gmail.com">mehreen.kiran89@gmail.com</a><a href="tel:+447473949490">+44 7473 949490</a><a href="https://linkedin.com/in/mahreen-kiran">linkedin.com/in/mahreen-kiran</a><span>Portsmouth, UK</span></div></div></section>
-<footer>Portfolio prepared from Dr Mahreen Kiran’s CV, doctoral thesis and research manuscripts. Visuals are reproduced from the supplied research documents for professional portfolio use.</footer>
-</body></html>
+      /* 9. EXPERIENCE TIMELINE */
+      .timeline {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 22px;
+        margin: 18px 0;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .timeline .when {
+        font-weight: 800;
+        color: var(--teal);
+      }
+      .timeline h3 {
+        margin: 0 0 5px;
+      }
+      .timeline p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      /* 10. PUBLICATIONS */
+      .publications {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .pub {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 18px;
+      }
+      .pub b {
+        display: block;
+        margin-bottom: 6px;
+      }
+      .pub span {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      /* 11. CONTACT SECTION */
+      .contact {
+        background: linear-gradient(125deg, #103f48, #0b6b6b);
+        max-width: none;
+        color: white;
+      }
+      .contact .inner {
+        max-width: 1160px;
+        margin: auto;
+        padding: 68px 24px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 35px;
+        align-items: center;
+      }
+      .contact h2 {
+        font-size: 38px;
+        margin: 0 0 10px;
+      }
+      .contact p {
+        color: #d9f3f0;
+        margin: 0;
+      }
+      .contact .links {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        text-align: right;
+      }
+      .contact a {
+        color: white;
+        font-weight: 700;
+      }
+
+      /* 12. FOOTER */
+      footer {
+        padding: 25px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+        background: white;
+      }
+
+      /* 13. TABLET AND MOBILE LAYOUT */
+      @media (max-width: 850px) {
+        .hero .wrap,
+        .project .top,
+        .project .bottom,
+        .contact .inner {
+          grid-template-columns: 1fr;
+        }
+        .stats,
+        .grid3 {
+          grid-template-columns: 1fr 1fr;
+        }
+        .publications {
+          grid-template-columns: 1fr;
+        }
+        .hero h1 {
+          font-size: 42px;
+        }
+        .navlinks {
+          display: none;
+        }
+        .contact .links {
+          text-align: left;
+        }
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+        .image-pair {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 520px) {
+        .stats,
+        .grid3,
+        .result-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero .wrap {
+          padding-top: 55px;
+        }
+        .hero h1 {
+          font-size: 36px;
+        }
+        .section-head {
+          display: block;
+        }
+        .section-head h2 {
+          font-size: 30px;
+        }
+      }
+
+      /* 14. PDF AND PRINT LAYOUT */
+      @media print {
+        body {
+          background: white;
+          font-size: 10.5pt;
+        }
+        nav {
+          display: none;
+        }
+        .hero .wrap {
+          padding: 45px 34px;
+        }
+        .hero h1 {
+          font-size: 36pt;
+        }
+        .hero h2 {
+          font-size: 16pt;
+        }
+        section {
+          padding: 34px 28px;
+          max-width: none;
+        }
+        .stats {
+          margin-top: -20px;
+          padding: 0 28px;
+        }
+        .project {
+          break-inside: avoid;
+          box-shadow: none;
+        }
+        .project .top {
+          grid-template-columns: 1.05fr 0.95fr;
+        }
+        .project .visual {
+          min-height: 270px;
+        }
+        .project .visual img {
+          max-height: 300px;
+        }
+        .section-head h2 {
+          font-size: 25pt;
+        }
+        .contact .inner {
+          padding: 40px 28px;
+        }
+        .btn {
+          border: 1px solid #d3e0e1;
+        }
+        .card,
+        .stat {
+          box-shadow: none;
+        }
+        .pagebreak {
+          break-before: page;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      ================================================================
+      EASY UPDATE MAP
+      ================================================================
+
+      1. PAGE TITLE
+         Search for: <title>
+
+      2. COLOURS AND FONT
+         Edit the values inside :root in the CSS section below.
+         To use Times New Roman, change --font-main to:
+         "Times New Roman", Times, serif
+
+      3. NAME, INTRODUCTION AND MAIN METRICS
+         Search for: HERO SECTION
+
+      4. EXPERTISE CARDS
+         Search for: EXPERTISE SECTION
+
+      5. PROJECTS
+         Search for:
+         PROJECT 1 - DIABETES DIGITAL TWIN
+         PROJECT 2 - DENGUE ANALYTICS
+         PROJECT 3 - EXPLAINABLE AI
+         PROJECT 4 - TUBERCULOSIS IMAGING
+
+      6. EXPERIENCE
+         Search for: EXPERIENCE SECTION
+
+      7. PUBLICATIONS
+         Search for: PUBLICATIONS SECTION
+
+      8. CONTACT DETAILS
+         Search for: CONTACT SECTION
+
+      9. IMAGES
+         Keep all images inside the assets folder.
+         Example: assets/diabetes_survival.png
+
+      Important:
+      You can safely edit the text between HTML tags.
+      Avoid changing class names unless you also want to change the design.
+      ================================================================
+    -->
+
+    <!-- =========================================================
+         NAVIGATION
+         Edit the menu labels here.
+    ========================================================== -->
+    <nav>
+      <div class="wrap">
+        <div class="brand">Dr Mahreen Kiran</div>
+        <div class="navlinks">
+          <a href="#expertise">Expertise</a><a href="#projects">Projects</a
+          ><a href="#experience">Experience</a
+          ><a href="#publications">Publications</a
+          ><a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <!-- =========================================================
+         HERO SECTION
+         Edit your name, headline, introduction, buttons and four metrics.
+    ========================================================== -->
+    <header class="hero">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow">
+            Healthcare data scientist and analyst portfolio
+          </div>
+          <h1>Dr Mahreen Kiran</h1>
+          <h2>
+            Turning complex health data into clear, clinically meaningful
+            evidence
+          </h2>
+          <p>
+            PhD-trained data scientist with more than four years of experience
+            across population health, clinical prediction, infectious disease
+            analytics and explainable AI. I build reproducible analytical
+            workflows, communicate uncertainty clearly and translate model
+            outputs into decisions that healthcare and public health teams can
+            use.
+          </p>
+          <div class="cta">
+            <a class="btn" href="mailto:mehreen.kiran89@gmail.com">Contact me</a
+            ><a class="btn alt" href="https://linkedin.com/in/mahreen-kiran"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="metric">
+            <b>500k+</b
+            ><span
+              >UK Biobank participants represented in population-scale
+              research</span
+            >
+          </div>
+          <div class="metric">
+            <b>0.90</b
+            ><span>C-index achieved in time-to-event diabetes prediction</span>
+          </div>
+          <div class="metric">
+            <b>3,000</b
+            ><span>Patient records analysed in a six-year dengue study</span>
+          </div>
+          <div class="metric">
+            <b>5+</b><span>Peer-reviewed papers plus a book chapter</span>
+          </div>
+        </aside>
+      </div>
+    </header>
+    <!-- =========================================================
+         PORTFOLIO SUMMARY STATISTICS
+         Each .stat block contains one headline number and description.
+    ========================================================== -->
+    <div class="stats">
+      <div class="stat">
+        <b>PhD</b
+        ><span>Computer Science, healthcare-focused predictive analytics</span>
+      </div>
+      <div class="stat">
+        <b>33 years</b
+        ><span
+          >AI and diabetes literature mapped through bibliometric analysis</span
+        >
+      </div>
+      <div class="stat">
+        <b>1,000</b
+        ><span>Monte Carlo simulations in an explainable AI study</span>
+      </div>
+      <div class="stat">
+        <b>No sponsorship</b
+        ><span>Global Talent Visa, available for UK roles</span>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         EXPERTISE SECTION
+         Edit the three capability cards and the capability chart.
+    ========================================================== -->
+    <section id="expertise">
+      <div class="section-head">
+        <div>
+          <div class="kicker">What I bring</div>
+          <h2>
+            Healthcare analytics from data preparation to decision-ready insight
+          </h2>
+        </div>
+        <p>
+          My work combines rigorous statistics, machine learning and clear
+          visual communication. I am particularly strong in longitudinal data,
+          time-to-event analysis, model interpretation and multidisciplinary
+          collaboration.
+        </p>
+      </div>
+      <div class="grid3">
+        <div class="card">
+          <div class="icon">01</div>
+          <h3>Health data preparation</h3>
+          <p>
+            Cohort definition, inclusion and exclusion criteria, missing-data
+            assessment, recoding, outlier checks, feature engineering and
+            traceable analytical datasets.
+          </p>
+          <div class="tags">
+            <span class="tag">pandas</span><span class="tag">NumPy</span
+            ><span class="tag">SQL</span><span class="tag">Excel</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon">02</div>
+          <h3>Statistical and predictive modelling</h3>
+          <p>
+            Regression, classification, survival analysis, neural networks,
+            ensemble models, causal inference, validation, calibration and
+            robustness testing.
+          </p>
+          <div class="tags">
+            <span class="tag">scikit-learn</span
+            ><span class="tag">lifelines</span><span class="tag">PyTorch</span
+            ><span class="tag">TensorFlow</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon">03</div>
+          <h3>Insight communication</h3>
+          <p>
+            Clear reports, publication-ready visualisations, dashboards and
+            explanations designed for clinicians, researchers, operational teams
+            and senior stakeholders.
+          </p>
+          <div class="tags">
+            <span class="tag">Power BI</span><span class="tag">Matplotlib</span
+            ><span class="tag">SHAP</span><span class="tag">VOSviewer</span>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="margin-top: 20px">
+        <img
+          src="assets/capabilities.png"
+          alt="Demonstrated analytical capability chart"
+          style="width: 100%; max-height: 330px; object-fit: contain"
+        />
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PROJECTS SECTION
+         Each project is kept in a separate article block.
+    ========================================================== -->
+    <section id="projects" class="pagebreak">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Selected work</div>
+          <h2>Projects that demonstrate healthcare impact</h2>
+        </div>
+        <p>
+          Each project below is presented as an employer-facing case study: the
+          question, analytical approach, key result, practical relevance and
+          tools used.
+        </p>
+      </div>
+      <!-- =======================================================
+           PROJECT 1 - DIABETES DIGITAL TWIN
+      ======================================================== -->
+      <article class="project">
+        <div class="top">
+          <div class="copy">
+            <div class="role">
+              PhD flagship project | Population health and prevention
+            </div>
+            <h3>
+              Behaviour-aware Digital Twin for Type 2 Diabetes prediction and
+              prevention
+            </h3>
+            <p>
+              <b>Challenge:</b> Conventional diabetes prediction often focuses
+              heavily on biomarkers and underrepresents behavioural,
+              psychosocial and lifestyle determinants. The goal was to build an
+              interpretable framework that could estimate time to diabetes onset
+              and support preventive what-if scenarios.
+            </p>
+            <div class="result-grid">
+              <div class="result">
+                <b>0.90</b><span>Concordance index</span>
+              </div>
+              <div class="result">
+                <b>500k+</b><span>UK Biobank cohort scale</span>
+              </div>
+              <div class="result">
+                <b>18</b><span>Predictors in the final survival model</span>
+              </div>
+            </div>
+            <p class="note">
+              <b>Employer value:</b> Demonstrates experience with longitudinal
+              health data, clinical risk stratification, model validation,
+              interpretable outputs and responsible communication of modifiable
+              risk factors.
+            </p>
+          </div>
+          <div class="visual">
+            <img
+              src="assets/diabetes_survival.png"
+              alt="Kaplan-Meier survival trajectories across diabetes risk groups"
+            />
+          </div>
+        </div>
+        <div class="bottom">
+          <div>
+            <h4>What I did</h4>
+            <ul>
+              <li>
+                Defined analytic cohorts and prepared behavioural, lifestyle,
+                psychosocial and health variables.
+              </li>
+              <li>
+                Built penalised Cox models and neural approaches for
+                time-to-event risk estimation.
+              </li>
+              <li>
+                Used causal reasoning and intervention simulation to examine
+                potential changes in sleep, diet and mental health.
+              </li>
+              <li>
+                Created risk groups and survival trajectories to make model
+                results easier to interpret.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Key findings and tools</h4>
+            <ul>
+              <li>
+                Loneliness, insomnia, mental health history, smoking and dietary
+                behaviours contributed meaningful risk information.
+              </li>
+              <li>
+                Healthy sleep duration showed a protective association, while
+                several psychosocial stressors increased estimated hazard.
+              </li>
+              <li>
+                <b>Tools:</b> Python, pandas, NumPy, lifelines, scikit-learn,
+                neural networks, SHAP, causal inference, Matplotlib.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <div class="image-pair">
+        <img
+          src="assets/diabetes_clustering.png"
+          alt="Clustering and t-SNE analysis from diabetes research"
+        /><img
+          src="assets/behaviour_networks.png"
+          alt="Behavioural network reorganisation analysis"
+        />
+      </div>
+
+      <!-- =======================================================
+           PROJECT 2 - DENGUE ANALYTICS
+      ======================================================== -->
+      <article class="project pagebreak">
+        <div class="top">
+          <div class="copy">
+            <div class="role">
+              Research collaboration | Infectious disease analytics
+            </div>
+            <h3>
+              Machine learning prediction of dengue infection across five
+              districts
+            </h3>
+            <p>
+              <b>Challenge:</b> Analyse a complex, imbalanced, multi-year
+              patient dataset that combined clinical, laboratory, serological,
+              behavioural, epidemiological and environmental information, then
+              determine what genuinely contributed to case classification.
+            </p>
+            <div class="result-grid">
+              <div class="result"><b>3,000</b><span>Patient records</span></div>
+              <div class="result">
+                <b>2019–24</b><span>Six-year study period</span>
+              </div>
+              <div class="result"><b>5</b><span>Endemic districts</span></div>
+            </div>
+            <p class="note">
+              <b>Strong analytical judgement:</b> The analysis did not simply
+              celebrate a high score. It identified that serological variables
+              drove much of the full-model performance and showed that
+              environmental variables alone were near chance for
+              individual-level confirmation. This distinction protects against
+              misleading claims.
+            </p>
+          </div>
+          <div class="visual">
+            <img
+              src="assets/dengue_auc.png"
+              alt="Dengue model AUC comparison"
+            />
+          </div>
+        </div>
+        <div class="bottom">
+          <div>
+            <h4>Analytical approach</h4>
+            <ul>
+              <li>
+                Data-quality checks and preprocessing across more than 50
+                variables.
+              </li>
+              <li>
+                Class imbalance handled within training folds using SMOTE and
+                class-weighted learning.
+              </li>
+              <li>
+                Compared Logistic Regression, Random Forest, Gradient Boosting
+                and Decision Tree models.
+              </li>
+              <li>
+                Used stratified cross-validation, temporal and geographic
+                validation, feature importance and ablation analysis.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Outcome and relevance</h4>
+            <ul>
+              <li>
+                Initial model comparisons produced AUC-ROC values around 0.90 to
+                0.94.
+              </li>
+              <li>
+                A later full-feature model reached 0.995 AUC, but sensitivity
+                analysis showed this was substantially driven by diagnostic
+                serology.
+              </li>
+              <li>
+                Environmental-only AUC remained approximately 0.49 to 0.52,
+                supporting their use at population or temporal surveillance
+                level rather than individual diagnosis.
+              </li>
+              <li>
+                <b>Tools:</b> Python, scikit-learn, pandas, cross-validation,
+                SMOTE, feature importance, ablation analysis.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- =======================================================
+           PROJECT 3 - EXPLAINABLE AI
+      ======================================================== -->
+      <article class="project">
+        <div class="top">
+          <div class="copy">
+            <div class="role">Explainable AI | Multidisciplinary research</div>
+            <h3>
+              Climate-aware prediction of fungicide effectiveness using XGBoost
+              and SHAP
+            </h3>
+            <p>
+              <b>Challenge:</b> Integrate field trials, laboratory results,
+              climate variables and molecular modelling to understand how
+              temperature, humidity and precipitation altered pesticide
+              effectiveness.
+            </p>
+            <div class="result-grid">
+              <div class="result">
+                <b>1,000</b><span>Monte Carlo simulations</span>
+              </div>
+              <div class="result">
+                <b>3</b><span>Key esterase proteins identified</span>
+              </div>
+              <div class="result">
+                <b>-5.1</b><span>Best reported docking score</span>
+              </div>
+            </div>
+            <p class="note">
+              <b>Transferable value:</b> Although this project is agricultural,
+              it directly demonstrates skills relevant to healthcare analytics:
+              multimodal data integration, interaction effects, explainability,
+              simulation, uncertainty and translation of technical outputs into
+              practical recommendations.
+            </p>
+          </div>
+          <div class="visual">
+            <img
+              src="assets/xai_workflow.png"
+              alt="Multidisciplinary workflow combining field, laboratory, computational and machine learning analysis"
+            />
+          </div>
+        </div>
+        <div class="bottom">
+          <div>
+            <h4>What I contributed</h4>
+            <ul>
+              <li>
+                Prepared climate and pesticide variables, including imputation,
+                scaling, categorical encoding and outlier checks.
+              </li>
+              <li>
+                Applied XGBoost and SHAP interaction analysis to quantify
+                climate-dependent pesticide behaviour.
+              </li>
+              <li>
+                Used simulation to test combined environmental conditions and
+                improve interpretability.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Key result</h4>
+            <ul>
+              <li>
+                Propiconazole performed strongly, with Dose 4 producing the best
+                disease suppression and yield improvement.
+              </li>
+              <li>
+                SHAP results separated moisture-dependent, region-specific and
+                climate-adaptable pesticides.
+              </li>
+              <li>
+                <b>Tools:</b> XGBoost, SHAP, Monte Carlo simulation, AlphaFold
+                2, molecular docking, Python.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <div class="image-pair">
+        <img
+          src="assets/molecular_docking.png"
+          alt="Molecular docking outputs"
+        /><img
+          src="assets/shap_interactions.png"
+          alt="SHAP interaction results"
+        />
+      </div>
+
+      <!-- =======================================================
+           PROJECT 4 - TUBERCULOSIS IMAGING
+      ======================================================== -->
+      <article class="project pagebreak">
+        <div class="top">
+          <div class="copy">
+            <div class="role">MSc research | Medical image analysis</div>
+            <h3>Automated tuberculosis detection from chest radiographs</h3>
+            <p>
+              <b>Challenge:</b> Work with heterogeneous chest X-ray data
+              collected from multiple hospitals and design a reproducible
+              image-processing pipeline capable of highlighting pathological
+              regions associated with tuberculosis.
+            </p>
+            <div class="result-grid">
+              <div class="result">
+                <b>Multi-site</b><span>Hospital imaging sources</span>
+              </div>
+              <div class="result">
+                <b>End-to-end</b><span>Preprocessing to classification</span>
+              </div>
+              <div class="result">
+                <b>Clinical AI</b><span>Diagnostic support context</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="visual"
+            style="background: linear-gradient(135deg, #eaf5f4, #d9e9ef)"
+          >
+            <div style="text-align: center; padding: 30px">
+              <div style="font-size: 72px">🩻</div>
+              <h3 style="margin: 10px 0">Chest X-ray analytics</h3>
+              <p style="color: #60747a">
+                Image curation, preprocessing, segmentation and classical
+                machine learning
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div>
+            <h4>Work completed</h4>
+            <ul>
+              <li>
+                Collected and curated X-ray datasets with variable formats and
+                quality.
+              </li>
+              <li>
+                Designed preprocessing and segmentation workflows to isolate
+                clinically relevant regions.
+              </li>
+              <li>
+                Applied computer vision and machine learning methods to support
+                automated diagnostic analysis.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Transferable strengths</h4>
+            <ul>
+              <li>Clinical imaging data quality and standardisation.</li>
+              <li>Feature extraction and segmentation.</li>
+              <li>
+                Understanding of diagnostic support rather than autonomous
+                decision-making.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- =========================================================
+         EXPERIENCE SECTION
+         Duplicate or remove a .timeline block to update roles.
+    ========================================================== -->
+    <section id="experience">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Professional background</div>
+          <h2>Research, teaching and multidisciplinary collaboration</h2>
+        </div>
+        <p>
+          I combine technical depth with the ability to explain analytical
+          choices to people from clinical, scientific, operational and academic
+          backgrounds.
+        </p>
+      </div>
+      <div class="timeline">
+        <div class="when">2022–2026</div>
+        <div>
+          <h3>Data Scientist, PhD Research | Anglia Ruskin University</h3>
+          <p>
+            Population-scale diabetes prediction, survival analysis, Digital
+            Twin simulation, behavioural network analysis, explainability,
+            causal inference and publication.
+          </p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="when">2025–2026</div>
+        <div>
+          <h3>Research Associate | Cranfield University</h3>
+          <p>
+            Analysed real-world maritime energy data and translated operational
+            findings into recommendations for engineering and sustainability
+            stakeholders.
+          </p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="when">Sep 2024</div>
+        <div>
+          <h3>
+            Data Study Group Participant | Alan Turing Institute and UCL
+            Hospital
+          </h3>
+          <p>
+            Worked in a multidisciplinary team on a clinical prediction
+            challenge covering preprocessing, statistical analysis, model
+            development and reporting.
+          </p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="when">2013–2022</div>
+        <div>
+          <h3>Lecturer in Computer Science</h3>
+          <p>
+            Taught databases, image processing, programming and data structures,
+            supervised research projects and communicated complex methods to
+            mixed-ability audiences.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PUBLICATIONS SECTION
+         Each .pub block contains one publication title and citation line.
+    ========================================================== -->
+    <section id="publications">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Research communication</div>
+          <h2>Selected publications and evidence outputs</h2>
+        </div>
+        <p>
+          Peer-reviewed work demonstrates the ability to document methods,
+          defend analytical decisions and communicate findings clearly.
+        </p>
+      </div>
+      <div class="publications">
+        <div class="pub">
+          <b
+            >A Digital Twin Framework for Predicting and Simulating Type 2
+            Diabetes Onset</b
+          ><span>Frontiers in Digital Health, 2026</span>
+        </div>
+        <div class="pub">
+          <b
+            >Type 2 Diabetes Prediction Without Labs: A Systems-Level Neural
+            Framework</b
+          ><span>Frontiers in Digital Health, 2026</span>
+        </div>
+        <div class="pub">
+          <b
+            >Machine Learning and Artificial Intelligence in Type 2 Diabetes
+            Prediction</b
+          ><span>33-year bibliometric and literature analysis, 2025</span>
+        </div>
+        <div class="pub">
+          <b
+            >Explainable AI and Machine Learning for Wheat Black Point
+            Disease</b
+          ><span>Multidisciplinary preprint, 2025</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top: 18px">
+        <img
+          src="assets/bibliometric_trends.png"
+          alt="Bibliometric citation and collaboration analysis"
+          style="width: 100%; max-height: 380px; object-fit: contain"
+        />
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT SECTION
+         Edit target roles, email, phone, LinkedIn and location here.
+    ========================================================== -->
+    <section id="contact" class="contact">
+      <div class="inner">
+        <div>
+          <div class="kicker" style="color: #bfe9e5">
+            Open to healthcare analytics opportunities
+          </div>
+          <h2>Let’s turn health data into evidence that improves decisions.</h2>
+          <p>
+            Target roles: Healthcare Data Analyst, Senior Data Analyst, Clinical
+            Data Analyst, Population Health Analyst and Health Data Scientist.
+          </p>
+        </div>
+        <div class="links">
+          <a href="mailto:mehreen.kiran89@gmail.com"
+            >mehreen.kiran89@gmail.com</a
+          ><a href="tel:+447473949490">+44 7473 949490</a
+          ><a href="https://linkedin.com/in/mahreen-kiran"
+            >linkedin.com/in/mahreen-kiran</a
+          ><span>Portsmouth, UK</span>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+    <footer>
+      Portfolio prepared from Dr Mahreen Kiran’s CV, doctoral thesis and
+      research manuscripts. Visuals are reproduced from the supplied research
+      documents for professional portfolio use.
+    </footer>
+  </body>
+</html>
