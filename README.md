@@ -16,7 +16,7 @@
 [![Global Talent Visa](https://img.shields.io/badge/UK-Global%20Talent%20Visa-F0B64D?style=for-the-badge)](#contact)
 
 <p align="center">
-  <a href="index.html"><strong>View the interactive portfolio</strong></a>
+  <a href="https://mahreenkiran.github.io/Portfolio/"><strong>View the interactive portfolio</strong></a>
   &nbsp;&nbsp; | &nbsp;&nbsp;
   <a href="Mahreen_Kiran_Healthcare_Data_Portfolio.pdf"><strong>Download the PDF portfolio</strong></a>
   &nbsp;&nbsp; | &nbsp;&nbsp;
