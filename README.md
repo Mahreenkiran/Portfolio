@@ -23,7 +23,7 @@
 
 | Population scale | Predictive performance | Infectious disease records | Research outputs |
 |:---:|:---:|:---:|:---:|
-| **500,000+** | **0.90 C-index** | **3,000 patients** | **5+ papers** |
+| **500,000+** | **0.90 C-index** | **3,000 patients** | **15+ papers** |
 | UK Biobank population resource | Time-to-event diabetes prediction | Six-year dengue study | Plus a book chapter |
 
 ---
