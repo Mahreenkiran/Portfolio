@@ -482,25 +482,25 @@
   align-self: flex-start;
   margin-top: 50px;
 }
-<!-- 4 image code -->
-      /* Four images in a 2 × 2 grid */
+<! -- 4 images code -->
+      /* Force four project images into a 2 × 2 grid */
 .project .visual.visual-grid {
   display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: auto auto;
   gap: 14px;
   padding: 16px;
+  align-content: center;
   align-items: start;
   min-height: 0;
-  overflow: visible;
 }
 
-/* Box around each image */
+/* Each image box */
 .project .visual.visual-grid .visual-item {
   width: 100%;
   min-width: 0;
   height: auto;
-  aspect-ratio: auto;
-  overflow: visible;
+  padding: 8px;
 
   display: flex;
   align-items: center;
@@ -509,23 +509,17 @@
   background: white;
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 8px;
+  overflow: visible;
 }
 
-/* Show the complete image */
+/* Keep the full image visible */
 .project .visual.visual-grid .visual-item img {
   display: block;
-
   width: 100% !important;
   height: auto !important;
-
   max-width: 100%;
   max-height: none !important;
-
   object-fit: contain !important;
-  object-position: center;
-
-  border-radius: 6px;
 }
       /* 13. TABLET AND MOBILE LAYOUT */
       @media (max-width: 850px) {
@@ -907,30 +901,32 @@
   <div class="visual-item">
     <img
       src="assets/diabetes_survival.png"
-      alt="Kaplan-Meier survival trajectories across diabetes risk groups"
+      alt="Diabetes result 1"
     />
   </div>
 
   <div class="visual-item">
     <img
       src="assets/diabetes_survival.png"
-      alt="Diabetes participant clustering analysis"
+      alt="Diabetes result 2"
     />
   </div>
 
   <div class="visual-item">
     <img
       src="assets/diabetes_survival.png"
-      alt="Behavioural network analysis"
+      alt="Diabetes result 3"
     />
   </div>
 
   <div class="visual-item">
     <img
       src="assets/diabetes_survival.png"
-      alt="Additional diabetes analysis result"
+      alt="Diabetes result 4"
     />
   </div>
+
+</div>
 
 </div>
         </div>
