@@ -582,6 +582,10 @@
 .network-gallery-item:nth-child(2) img {
   transform: scale(0.74);
 }
+      .bottom-network-image img {
+  transform: scale(1.15);
+  transform-origin: center;
+}
       /* 13. TABLET AND MOBILE LAYOUT */
       @media (max-width: 850px) {
         .hero .wrap,
@@ -1133,18 +1137,18 @@
 <div class="network-gallery">
 
   <div class="network-gallery-item">
-    <img
-      src="assets/neuralnetwork2.jpg"
-      alt="Behavioural cohesion analysis"
-    />
-  </div>
+  <img
+    src="assets/neuralnetwork2.jpg"
+    alt="Behavioural cohesion analysis"
+  />
+</div>
 
-  <div class="network-gallery-item">
-    <img
-      src="assets/neuralnetwork3.jpg"
-      alt="Behavioural network comparison"
-    />
-  </div>
+<div class="network-gallery-item bottom-network-image">
+  <img
+    src="assets/neuralnetwork3.jpg"
+    alt="Healthy and T2DM behavioural networks"
+  />
+</div>
 
 </div></div>
 <!-- Important: closes the top section -->
