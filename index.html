@@ -482,6 +482,37 @@
   align-self: flex-start;
   margin-top: 50px;
 }
+      /* Four-image grid inside a project */
+.project .visual.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 18px;
+  align-items: stretch;
+  min-height: 0;
+}
+
+/* Individual image container */
+.project .visual-grid .visual-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+/* Show the complete image without cropping */
+.project .visual-grid .visual-item img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 6px;
+}
       /* 13. TABLET AND MOBILE LAYOUT */
       @media (max-width: 850px) {
         .hero .wrap,
