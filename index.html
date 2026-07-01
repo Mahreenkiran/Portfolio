@@ -483,23 +483,22 @@
   margin-top: 50px;
 }
 <! -- 4 images code -->
-      /* Force four project images into a 2 × 2 grid */
-.project .visual.visual-grid {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  grid-template-rows: auto auto;
+      /* Independent 2 × 2 project gallery */
+.project-gallery {
+  background: #eef7f7;
+  padding: 18px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 14px;
-  padding: 16px;
+
   align-content: center;
-  align-items: start;
-  min-height: 0;
+  min-width: 0;
 }
 
-/* Each image box */
-.project .visual.visual-grid .visual-item {
-  width: 100%;
+/* Individual gallery box */
+.project-gallery .gallery-item {
   min-width: 0;
-  height: auto;
   padding: 8px;
 
   display: flex;
@@ -509,17 +508,16 @@
   background: white;
   border: 1px solid var(--line);
   border-radius: 10px;
-  overflow: visible;
 }
 
-/* Keep the full image visible */
-.project .visual.visual-grid .visual-item img {
+/* Full image without cropping */
+.project-gallery .gallery-item img {
   display: block;
-  width: 100% !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
   max-width: 100%;
-  max-height: none !important;
-  object-fit: contain !important;
+  object-fit: contain;
+  border-radius: 6px;
 }
       /* 13. TABLET AND MOBILE LAYOUT */
       @media (max-width: 850px) {
@@ -896,30 +894,30 @@
               risk factors.
             </p>
           </div>
-          <div class="visual visual-grid">
+          <div class="project-gallery">
 
-  <div class="visual-item">
+  <div class="gallery-item">
     <img
       src="assets/diabetes_survival.png"
       alt="Diabetes result 1"
     />
   </div>
 
-  <div class="visual-item">
+  <div class="gallery-item">
     <img
       src="assets/diabetes_survival.png"
       alt="Diabetes result 2"
     />
   </div>
 
-  <div class="visual-item">
+  <div class="gallery-item">
     <img
       src="assets/diabetes_survival.png"
       alt="Diabetes result 3"
     />
   </div>
 
-  <div class="visual-item">
+  <div class="gallery-item">
     <img
       src="assets/diabetes_survival.png"
       alt="Diabetes result 4"
@@ -927,9 +925,6 @@
   </div>
 
 </div>
-
-</div>
-        </div>
         <div class="bottom">
           <div>
             <h4>What I did</h4>
