@@ -483,26 +483,22 @@
   margin-top: 50px;
 }
 <! -- 4 images code -->
-  /* 2 × 2 gallery for project images */
+      /* Independent 2 × 2 project gallery */
 .project-gallery {
-  width: 100%;
-  min-width: 0;
-  padding: 16px;
   background: #eef7f7;
+  padding: 18px;
 
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  grid-template-rows: repeat(2, 240px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 14px;
 
   align-content: center;
+  min-width: 0;
 }
 
-/* Individual image container */
+/* Individual gallery box */
 .project-gallery .gallery-item {
-  width: 100%;
   min-width: 0;
-  height: 240px;
   padding: 8px;
 
   display: flex;
@@ -512,20 +508,16 @@
   background: white;
   border: 1px solid var(--line);
   border-radius: 10px;
-  overflow: hidden;
 }
 
-/* Keep the complete image visible */
+/* Full image without cropping */
 .project-gallery .gallery-item img {
   display: block;
-  width: 100% !important;
-  height: 100% !important;
-
-  max-width: 100% !important;
-  max-height: 100% !important;
-
-  object-fit: contain !important;
-  object-position: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
 }
       /* 13. TABLET AND MOBILE LAYOUT */
       @media (max-width: 850px) {
