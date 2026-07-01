@@ -973,6 +973,186 @@
         />
       </div>
 
+<!-- =======================================================
+     NEURAL NETWORK AND BEHAVIOURAL REORGANISATION PROJECT
+======================================================== -->
+
+<article class="project pagebreak">
+
+  <div class="top">
+
+    <div class="copy">
+
+      <div class="role">
+        PhD research | Neural networks and behavioural systems analysis
+      </div>
+
+      <h3>
+        Type 2 Diabetes Prediction Without Laboratory Data:
+        A Systems-Level Neural Framework for Behavioural
+        Network Reorganisation
+      </h3>
+
+      <p>
+        <b>Challenge:</b>
+        Traditional diabetes models often treat BMI, smoking, sleep,
+        diet and psychological wellbeing as separate predictors. This
+        makes it difficult to understand how these behaviours interact,
+        reinforce one another or reorganise as metabolic health
+        deteriorates. The goal was to develop an interpretable neural
+        framework using non-laboratory variables to compare behavioural
+        networks in healthy and T2DM populations and identify stable,
+        high-leverage targets for prevention.
+      </p>
+
+      <div class="result-grid">
+
+        <div class="result">
+          <b>15,422</b>
+          <span>Participants in the analytical cohort</span>
+        </div>
+
+        <div class="result">
+          <b>1,800</b>
+          <span>Neural networks trained across both cohorts</span>
+        </div>
+
+        <div class="result">
+          <b>18</b>
+          <span>Behavioural and psychosocial predictors</span>
+        </div>
+
+      </div>
+
+      <p class="note">
+        <b>Employer value:</b>
+        Demonstrates the ability to move beyond black-box prediction
+        by converting neural network outputs into interpretable,
+        clinically meaningful behavioural networks. The project combines
+        robust model validation, explainability, systems thinking and
+        healthcare-focused interpretation.
+      </p>
+
+    </div>
+
+    <div class="visual">
+      <img
+        src="assets/behaviour_networks.png"
+        alt="Neural network influence and behavioural network reorganisation analysis"
+      />
+    </div>
+
+  </div>
+
+  <div class="bottom">
+
+    <div>
+
+      <h4>What I did</h4>
+
+      <ul>
+        <li>
+          Prepared a balanced analytical cohort of 15,422 participants,
+          comprising 7,711 T2DM events and 7,711 censored participants.
+        </li>
+
+        <li>
+          Modelled 18 behavioural, psychosocial, dietary, sleep,
+          smoking and demographic variables without relying on
+          laboratory biomarkers.
+        </li>
+
+        <li>
+          Developed separate neural network models for healthy and
+          T2DM cohorts using two hidden layers of 64 and 32 neurons
+          with ReLU activation.
+        </li>
+
+        <li>
+          Used a one-versus-all design in which each variable was
+          predicted from the remaining variables.
+        </li>
+
+        <li>
+          Repeated training across 10 independent initialisations and
+          five-fold cross-validation, generating 50 models per target
+          and 900 networks per cohort.
+        </li>
+
+        <li>
+          Extracted directional influence scores using effective
+          connection weights and converted them into weighted,
+          directed behavioural networks.
+        </li>
+
+        <li>
+          Compared network structure using eigenvector centrality,
+          betweenness, PageRank, in-degree, out-degree and cohesion
+          measures.
+        </li>
+
+        <li>
+          Integrated neural network results with Cox survival analysis
+          to identify variables associated with both disease onset and
+          disease maintenance.
+        </li>
+      </ul>
+
+    </div>
+
+    <div>
+
+      <h4>Key findings, tools and techniques</h4>
+
+      <ul>
+        <li>
+          Healthy participants showed a distributed, multi-anchor
+          network, while the T2DM network became concentrated around
+          a smaller number of maladaptive behavioural hubs.
+        </li>
+
+        <li>
+          Tobacco smoking became the dominant structural hub,
+          connecting emotional distress with dietary and lifestyle
+          behaviours.
+        </li>
+
+        <li>
+          Processed meat intake gained a stronger bridging role between
+          unhealthy dietary patterns and psychological states.
+        </li>
+
+        <li>
+          Loneliness and insomnia shifted from downstream outcomes to
+          active behavioural drivers and cross-domain intervention
+          points.
+        </li>
+
+        <li>
+          Protective anchors including high-fibre cereals, muesli and
+          moderate BMI lost systemic influence in the T2DM network.
+        </li>
+
+        <li>
+          <b>Tools:</b>
+          Python, pandas, NumPy, neural networks, Cox regression and
+          scientific visualisation.
+        </li>
+
+        <li>
+          <b>Techniques:</b>
+          multilayer perceptrons, ReLU activation, repeated five-fold
+          cross-validation, connection-weight analysis, Garson and
+          Olden influence estimation, directed weighted networks,
+          centrality analysis and behavioural cohesion modelling.
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</article>
       <!-- =======================================================
            PROJECT 2 - DENGUE ANALYTICS
       ======================================================== -->
